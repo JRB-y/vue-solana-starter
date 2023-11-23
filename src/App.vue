@@ -2,8 +2,7 @@
 import Header from './components/Header.vue'
 import { useAuth } from './composables/useAuth'
 
-const { isAuth } = useAuth();
-
+const { isAuth, publicKey } = useAuth();
 </script>
 
 <template>
@@ -13,7 +12,7 @@ const { isAuth } = useAuth();
     <p>
       You are {{
         isAuth
-        ? `logged in with pubKey: ${isAuth}`
+        ? `logged in with pubKey: ${publicKey}`
         : `not logged`
       }}
     </p>
